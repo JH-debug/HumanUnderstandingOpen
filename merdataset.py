@@ -5,10 +5,8 @@ from torch.utils.data import Dataset
 
 class MERDataset(Dataset):
     def __init__(self,data_option='train',path='./'):
-        with open(path+'processed2_KEMDy20.json','r') as file:
+        with open(path+'processed_KEMDy20.json','r') as file:
             data = json.load(file)
-
-
 
         train = list(range(1,33))
         test = list(range(33,41))
@@ -70,7 +68,6 @@ class MERDataset(Dataset):
         sum_ = len(self.data)
         weight = [sum_/i for i in weight]
         return weight
-
 
 
 
