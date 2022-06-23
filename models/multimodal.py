@@ -8,8 +8,6 @@ from torch import nn
 from transformers import Wav2Vec2Processor, Wav2Vec2Model
 from transformers import ElectraTokenizer, ElectraModel
 
-from multimodal_attention import *
-
 
 def read_file(file_name):
     wav, _ = sf.read(file_name,samplerate=16000)
